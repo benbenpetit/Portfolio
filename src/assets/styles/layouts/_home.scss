@@ -1,0 +1,43 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+}
+
+.page {
+  > header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    height: 60px;
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .scroll {
+    main {
+      header {
+        padding: 8.5rem 0;
+        height: 50vh;
+      }
+
+      .scroll-section {
+        section {
+          height: 7.5rem 0;
+          height: 20vh;
+        }
+      }
+    }
+
+    footer {
+      padding: 5rem 0;
+      border-top: 1px solid #333333;
+    }
+  }
+}
