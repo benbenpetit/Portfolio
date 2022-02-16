@@ -13,7 +13,7 @@ const App = () => {
 
   const checkScreenHeight = () => {
     if (window.innerHeight > containerRef.current.scrollHeight) return;
-    document.querySelector('.c-scrollbar_thumb').style = '';
+    document.querySelector('.c-scrollbar_thumb').removeAttribute('style');
   }
 
   return (
@@ -33,6 +33,7 @@ const App = () => {
         onLocationChange={(scroll) => {
           checkScreenHeight();
           scroll.scrollTo(0, { duration: 0, disableLerp: true });
+          scroll.update();
         }}
       >
         <div className="page" data-scroll-container ref={containerRef}>
