@@ -1,6 +1,6 @@
 import './assets/styles/styles.scss';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { Route, useLocation, Switch } from 'react-router';
 import Home from './views/Home';
 import About from './views/About';
@@ -27,13 +27,12 @@ const App = () => {
           class: 'in-view',
           scrollbarContainer: document.getElementById('root')
         }}
-        watch={[pathname]}
+        watch={[]}
         containerRef={containerRef}
         location={pathname}
         onLocationChange={(scroll) => {
           checkScreenHeight();
           scroll.scrollTo(0, { duration: 0, disableLerp: true });
-          scroll.update();
         }}
       >
         <div className="page" data-scroll-container ref={containerRef}>
