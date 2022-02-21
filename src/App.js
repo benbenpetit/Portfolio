@@ -1,20 +1,26 @@
-import './assets/styles/styles.scss';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-import { useRef } from 'react';
-import { Route, useLocation, Switch } from 'react-router';
-import Home from './views/Home';
-import About from './views/About';
-import Contact from './views/Contact';
-import Header from './components/Header';
+import "./assets/styles/styles.scss";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { useEffect, useRef, useState } from "react";
+import { Route, useLocation, Routes } from "react-router";
+import clsx from "clsx";
+import Header from "Components/Header";
+import Home from "Views/Home";
+import About from "Views/About";
+import Contact from "Views/Contact";
+import CaseStudy from "Views/CaseStudy";
 
 const App = () => {
   const containerRef = useRef(null);
-  const pathname = useLocation();
+  const location = useLocation();
 
   const checkScreenHeight = () => {
-    if (window.innerHeight > containerRef.current.scrollHeight) return;
-    document.querySelector('.c-scrollbar_thumb').removeAttribute('style');
-  }
+    if (window.innerHeight > containerRef.current.scrollHeight || !document.querySelector(".c-scrollbar_thumb")) return;
+    document.querySelector(".c-scrollbar_thumb").removeAttribute("style");
+  };
+
+  useEffect(() => {
+    document.querySelector('html').classList.add('is-loaded');
+  }, []);
 
   return (
     <>
@@ -24,12 +30,12 @@ const App = () => {
           smooth: true,
           repeat: true,
           lerp: 0.12,
-          class: 'in-view',
-          scrollbarContainer: document.getElementById('root')
+          class: "in-view",
+          scrollbarContainer: document.getElementById("root")
         }}
         watch={[]}
         containerRef={containerRef}
-        location={pathname}
+        location={location}
         onLocationChange={(scroll) => {
           checkScreenHeight();
           scroll.scrollTo(0, { duration: 0, disableLerp: true });
@@ -38,27 +44,25 @@ const App = () => {
         <div className="page" data-scroll-container ref={containerRef}>
           <Header />
           <div className="scroll">
-            <Switch>
-              <Route path="/about" exact>
-                <About />
-              </Route>
-              <Route path="/contact" exact>
-                <Contact />
-              </Route>
-              <Route path="/" exact>
-                <Home />
-              </Route>
-              <Route path="*">
-                <section data-scroll-section>
-                  <h1>Error 404</h1>
-                  <h1>Error 404</h1>
-                  <h1>Error 404</h1>
-                  <h1>Error 404</h1>
-                  <h1>Error 404</h1>
-                  <h1>Error 404</h1>
-                </section>
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/about" element={<About />} exact />
+              <Route path="/contact" element={<Contact />} exact />
+              <Route path="/case-study/:pathname" element={<CaseStudy />} exact />
+              <Route path="/" element={<Home />} exact />
+              <Route
+                path="*"
+                element={
+                  <section data-scroll-section>
+                    <h1>Error 404</h1>
+                    <h1>Error 404</h1>
+                    <h1>Error 404</h1>
+                    <h1>Error 404</h1>
+                    <h1>Error 404</h1>
+                    <h1>Error 404</h1>
+                  </section>
+                }
+              />
+            </Routes>
           </div>
         </div>
       </LocomotiveScrollProvider>
