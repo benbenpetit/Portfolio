@@ -1,13 +1,13 @@
 import "./assets/styles/styles.scss";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Route, useLocation, Routes } from "react-router";
-import clsx from "clsx";
 import Header from "Components/Header";
 import Home from "Views/Home";
 import About from "Views/About";
 import Contact from "Views/Contact";
 import CaseStudy from "Views/CaseStudy";
+import { LoadingProvider } from "./utils/LoadingContext";
 
 const App = () => {
   const containerRef = useRef(null);
@@ -23,7 +23,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <LoadingProvider>
       <div className="loader"></div>
       <LocomotiveScrollProvider
         options={{
@@ -66,7 +66,7 @@ const App = () => {
           </div>
         </div>
       </LocomotiveScrollProvider>
-    </>
+    </LoadingProvider>
   );
 };
 

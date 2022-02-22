@@ -1,9 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { LoadingContext } from "src/utils/LoadingContext";
 
 const Link = ({ path, replace = false, children }) => {
   const linkRef = useRef(null);
   const navigate = useNavigate();
+  const load = useContext(LoadingContext);
+
+  useEffect(() => {
+    console.log(load);
+  
+    return () => {
+      console.log('destroyed');
+    }
+  }, [load])
+  
 
   const handleClick = (e) => {
     e.preventDefault();
