@@ -1,17 +1,19 @@
 import "./assets/styles/styles.scss";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { Route, useLocation, Routes } from "react-router";
-import clsx from "clsx";
 import Header from "Components/Header";
 import Home from "Views/Home";
 import About from "Views/About";
 import Contact from "Views/Contact";
 import CaseStudy from "Views/CaseStudy";
+import ErrorPage from "Views/ErrorPage";
+import { LoadingContext } from "Utils/context";
 
 const App = () => {
   const containerRef = useRef(null);
   const location = useLocation();
+  const { loadingStateRef } = useContext(LoadingContext);
 
   const checkScreenHeight = () => {
     if (window.innerHeight > containerRef.current.scrollHeight || !document.querySelector(".c-scrollbar_thumb")) return;
@@ -19,8 +21,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    document.querySelector('html').classList.add('is-loaded');
-  }, []);
+    loadingStateRef.current.classList.add('is-loaded');
+  }, [loadingStateRef]);
 
   return (
     <>
@@ -49,19 +51,7 @@ const App = () => {
               <Route path="/contact" element={<Contact />} exact />
               <Route path="/case-study/:pathname" element={<CaseStudy />} exact />
               <Route path="/" element={<Home />} exact />
-              <Route
-                path="*"
-                element={
-                  <section data-scroll-section>
-                    <h1>Error 404</h1>
-                    <h1>Error 404</h1>
-                    <h1>Error 404</h1>
-                    <h1>Error 404</h1>
-                    <h1>Error 404</h1>
-                    <h1>Error 404</h1>
-                  </section>
-                }
-              />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>
         </div>

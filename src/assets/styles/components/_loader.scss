@@ -1,0 +1,18 @@
+.loader {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #222222;
+  transition: height 1s cubic-bezier(0.85, 0, 0.2, 1) 0.3s;
+}
+
+.js-loading-state {
+  &.is-loaded {
+    .loader {
+      height: 0;
+    }
+  }
+}

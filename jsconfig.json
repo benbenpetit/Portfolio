@@ -5,6 +5,8 @@
       "components/*": ["src/components/*"],
       "views/*": ["src/views/*"],
       "assets/*": ["src/assets/*"],
+      "data/*": ["src/data/*"],
+      "utils/*": ["src/utils/*"],
       "src/*": ["src/src/*"]
     }
   },

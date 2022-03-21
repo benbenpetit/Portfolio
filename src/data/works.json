@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Spotify replica",
+        "text": "Made a spotify replica using SCSS to enhance basic CSS possibilities and clearer file management. Used vanilla Javascript to manipulate music with web audio API",
+        "imagePath": "./src/ressources/images/spotify.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Spotify replica",
+        "text": "Made a spotify replica using SCSS to enhance basic CSS possibilities and clearer file management. Used vanilla Javascript to manipulate music with web audio API",
+        "imagePath": "./src/ressources/images/spotify.jpg"
+    }
+]

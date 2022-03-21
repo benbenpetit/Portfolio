@@ -3,23 +3,20 @@ import Link from "Components/Link";
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <Link path="/">benoît petit</Link>
-          </li>
-          <li>
-            <Link path="/about">about</Link>
-          </li>
-          <li>
-            <Link path="/contact">contact</Link>
-          </li>
-          <li>
-            <Link path="/case-study/spotify-replica">spotify replica</Link>
-          </li>
-        </ul>
-      </nav>
+    <header className="c-navbar">
+      <div className="c-navbar__wrapper o-wrapper">
+        <Link path="/" className="c-navbar__tagline">benoît petit</Link>
+        <nav className="c-navbar__nav">
+          <ul className="c-navbar__nav__list">
+            <li className="c-navbar__nav__list__item">
+              <Link path="/about">about</Link>
+            </li>
+            <li className="c-navbar__nav__list__item">
+              <Link path="/contact">contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
