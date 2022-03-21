@@ -1,8 +1,8 @@
 import React, { useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { LoadingContext } from "src/utils/context";
+import { LoadingContext } from "Utils/context";
 
-const Link = ({ path, replace = false, children }) => {
+const Link = ({ path, replace = false, children, className }) => {
   const linkRef = useRef(null);
   const navigate = useNavigate();
   const { loadingStateRef } = useContext(LoadingContext);
@@ -19,7 +19,7 @@ const Link = ({ path, replace = false, children }) => {
   };
 
   return (
-    <a href={path} onClick={handleClick} ref={linkRef}>
+    <a href={path} className={className} onClick={handleClick} ref={linkRef}>
       {children}
     </a>
   );

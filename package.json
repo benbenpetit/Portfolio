@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react": "^17.0.41",
     "clsx": "^1.1.1",
     "locomotive-scroll": "^4.1.4",
     "react": "^17.0.2",

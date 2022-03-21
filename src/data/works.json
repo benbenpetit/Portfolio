@@ -3,12 +3,24 @@
         "id": 1,
         "title": "Spotify replica",
         "text": "Made a spotify replica using SCSS to enhance basic CSS possibilities and clearer file management. Used vanilla Javascript to manipulate music with web audio API",
-        "imagePath": "./src/ressources/images/spotify.jpg"
+        "imagePath": "/spotify.jpg",
+        "pagePath": "spotify-replica",
+        "demoPath": "https://benoitpetit.fr/test_creations/spotify_replica/"
     },
     {
         "id": 2,
-        "title": "Spotify replica",
-        "text": "Made a spotify replica using SCSS to enhance basic CSS possibilities and clearer file management. Used vanilla Javascript to manipulate music with web audio API",
-        "imagePath": "./src/ressources/images/spotify.jpg"
+        "title": "Landing page",
+        "text": "Simple landing page with several interresting features such as sliders but also 3D Object and option to change language.",
+        "imagePath": "/landing.jpg",
+        "pagePath": "landing-page",
+        "demoPath": "https://benoitpetit.fr/promo/"        
+    },
+    {
+        "id": 3,
+        "title": "Login system",
+        "text": "Made a complete login system + Google login using MySQL database and PHP to make requests. Also using jQuery AJAX to notify the user from errors.",
+        "imagePath": "/login.jpg",
+        "pagePath": "login-system",
+        "demoPath": "https://benoitpetit.fr/test_creations/google_login/"
     }
 ]

@@ -4,7 +4,7 @@ import Link from "Components/Link";
 const Header = () => {
   return (
     <header className="c-navbar">
-      <div className="c-navbar__wrapper o-wrapper">
+      <div className="c-navbar__wrapper">
         <Link path="/" className="c-navbar__tagline">benoît petit</Link>
         <nav className="c-navbar__nav">
           <ul className="c-navbar__nav__list">

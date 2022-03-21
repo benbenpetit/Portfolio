@@ -1,0 +1,58 @@
+.c-button {
+  position: relative;
+  display: inline-block;
+  padding: 1.6em 3em;
+  background: #23387e;
+  color: white;
+  white-space: nowrap;
+  margin-top: 2em;
+  overflow: hidden;
+
+  &__inner {
+    display: block;
+    z-index: 2;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0, 1);
+
+    &.-visible {
+      position: relative;
+    }
+
+    &.-hidden {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0) translateY(260%);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.15);
+    border-radius: 0;
+    transform: translateY(0);
+    transition: all 0.45s cubic-bezier(0.4, 0, 0, 1);
+  }
+
+  &:hover {
+    .c-button__inner {
+      &.-visible {
+        transform: translateY(-260%);
+      }
+
+      &.-hidden {
+        transform: translate3d(-50%, -50%, 0) scale(1.2) translateY(0);
+      }
+    }
+
+    &::after {
+      border-radius: 60%;
+      transform: translateY(-100%);
+    }
+  }
+}
