@@ -25,7 +25,7 @@ const App = () => {
   }, [loadingStateRef]);
 
   return (
-    <>
+    <LoadingProvider>
       <div className="loader"></div>
       <LocomotiveScrollProvider
         options={{
@@ -56,7 +56,7 @@ const App = () => {
           </div>
         </div>
       </LocomotiveScrollProvider>
-    </>
+    </LoadingProvider>
   );
 };
 
