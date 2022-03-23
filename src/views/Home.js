@@ -31,11 +31,11 @@ const Home = () => {
           <section className="work-section" data-scroll-section>
             <div className="work-section__works o-wrapper">
               <h2 className="work-section__works__heading u-anim" data-scroll data-scroll-offset="0, -1000%">my works</h2>
-              {workBlocks.map(workBlock => 
+              {workBlocks.map(workBlock =>
                 <WorkBlock key={workBlock.id} work={workBlock} />
               )}
             </div>
-            <div className="work-section__background" id="anchor" data-scroll data-scroll-repeat data-scroll-offset="32%">
+            <div className="work-section__background" id="anchor" data-scroll data-scroll-offset="32%">
             </div>
           </section>
         </div>

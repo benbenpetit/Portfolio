@@ -1,0 +1,25 @@
+.c-hide-block {
+  position: relative;
+
+  &__paragraph {
+    font-size: 2rem;
+  }
+
+  &__hide-wrapper {
+    position: relative;
+    overflow: hidden;
+    line-height: 1.25;
+
+    span {
+      display: inline-block;
+      transform: translate3d(0, 100%, 0);
+      transition-property: transform;
+      transition-duration: 0.8s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0, 1);
+
+      .c-hide-block.in-view & {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}

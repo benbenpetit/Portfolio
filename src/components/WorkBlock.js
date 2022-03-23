@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'Components/Link';
+import HideBlock from './HideBlock';
 
 const WorkBlock = ({ work }) => {
   return (
@@ -24,9 +25,7 @@ const WorkBlock = ({ work }) => {
         </figure>
       </aside>
       <div className="c-workblock__content" data-scroll data-scroll-offset="0, -1000%" data-scroll-speed="-1">
-        <div className="c-workblock__content__text c-hide" data-scroll>
-          <p className="c-hide -h-content">{work.text}</p>
-        </div>
+        <HideBlock>{work.text}</HideBlock>
         <Link path={"/case-study/" + work.pagePath} className="c-button">
           <span className="c-button__inner -visible">View case</span>
           <span className="c-button__inner -hidden">View case</span>

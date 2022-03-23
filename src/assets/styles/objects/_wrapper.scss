@@ -6,6 +6,10 @@
   max-width: 1320px;
   width: 100%;
 
+  &--big {
+    max-width: 1600px;
+  }
+
   @media screen and (min-width: 600px) {
     padding-left: 80px;
     padding-right: 80px;
