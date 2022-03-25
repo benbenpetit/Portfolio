@@ -10,7 +10,7 @@ const HideBlock = ({ children }) => {
 
     sentenceArray.forEach(word => {
       charCounter += word.length;
-      
+
       if (charCounter > 20) {
         newSentenceArray.push(`${word}%br%`);
         charCounter = 0;
@@ -19,7 +19,7 @@ const HideBlock = ({ children }) => {
       }
     });
 
-    return newSentenceArray.join(' ').split('%br%');
+    return newSentenceArray.join(' ').split('%br%').filter(el => el !== '');
   }
 
   useEffect(() => {
@@ -30,9 +30,9 @@ const HideBlock = ({ children }) => {
     <div className="c-hide-block" data-scroll data-scroll-offset="0, -1000%">
       <p className="c-hide-block__paragraph">
         {rows.map((row, i) => 
-          <div className="c-hide-block__hide-wrapper">
-            <span className={`-delay-${i}`}>{row}</span>
-          </div>
+          <span key={i} className="c-hide-block__hide-wrapper">
+            <span className={`c-hide-block__hide-wrapper__inside -delay-${i}`}>{row}</span>
+          </span>
         )}
       </p>
     </div>

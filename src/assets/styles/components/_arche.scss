@@ -6,6 +6,10 @@
   border-radius: 100% 100% 10px 10px;
   margin: 0 auto;
 
+  @media screen and (max-width: 600px) {
+    height: 40vh;
+  }
+
   &__image {
     position: absolute;
     left: 50%;

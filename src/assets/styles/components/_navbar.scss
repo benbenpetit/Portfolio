@@ -17,7 +17,7 @@
   font-weight: 400;
 
   @media screen and (max-width: 600px) {
-    padding: 0 40px;
+    padding: 0 30px;
   }
 
   &__wrapper {
@@ -25,50 +25,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  a {
-    opacity: 0.8;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0, 1);
-
-    &:hover {
-      opacity: 1;
+    a {
+      opacity: 0.8;
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0, 1);
+  
+      &:hover {
+        opacity: 1;
+      }
     }
-  }
 
-  &__nav {
-    &__list {
-      display: flex;
+    .c-navbar__tagline {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-shrink: 1;
+      overflow: hidden;
+    }
 
-      &__item {
-        &:not(:last-child) {
-          margin-right: 0.6rem;
-        }
-
-        a {
-          position: relative;
-          padding: .6em 1.2em;
-          overflow: hidden;
-          display: inline-block;
-
-          &::before {
-            content: "";
-            position: absolute;
-            top: -1px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255,255,255,0.2);
-            z-index: -1;
-            border-radius: 80%;
-            transform: translate3d(0, -100%, 0);
-            transition: all 0.2s cubic-bezier(0.4, 0, 0, 1);
-          }
-
-          &:hover {
+    .c-navbar__nav {
+      &__list {
+        display: flex;
+  
+        &__item {
+          a {
+            position: relative;
+            padding: .6em 1.2em;
+            overflow: hidden;
+            display: block;
+  
             &::before {
-              transform: translate3d(0, 0, 0);
-              border-radius: 0;
+              content: "";
+              position: absolute;
+              top: -1px;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: rgba(255,255,255,0.2);
+              z-index: -1;
+              border-radius: 80%;
+              transform: translate3d(0, -100%, 0);
+              transition: all 0.2s cubic-bezier(0.4, 0, 0, 1);
+            }
+  
+            &:hover {
+              &::before {
+                transform: translate3d(0, 0, 0);
+                border-radius: 0;
+              }
             }
           }
         }

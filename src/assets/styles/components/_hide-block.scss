@@ -1,16 +1,22 @@
 .c-hide-block {
   position: relative;
+  margin: 2rem 0;
 
   &__paragraph {
     font-size: 2rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.4rem;
+    }
   }
 
   &__hide-wrapper {
     position: relative;
+    display: block;
     overflow: hidden;
     line-height: 1.25;
 
-    span {
+    &__inside {
       display: inline-block;
       transform: translate3d(0, 100%, 0);
       transition-property: transform;
