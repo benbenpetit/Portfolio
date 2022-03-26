@@ -126,10 +126,17 @@
 
   &__article {
     position: relative;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 30px;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      padding: 0 160px;
+    }
 
     &__header {
       width: 100%;

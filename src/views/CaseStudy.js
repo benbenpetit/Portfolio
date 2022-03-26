@@ -1,49 +1,45 @@
-import React, { useEffect, useRef } from 'react';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import React, { useEffect, useRef, useState } from 'react';
+// import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { useParams } from "react-router";
 import Arche from 'Components/Arche';
 import Link from 'Components/Link';
 import HideBlock from 'Components/HideBlock';
 import LineBreak from 'Components/LineBreak';
+import workBlocks from "Data/works.json";
 
 const CaseStudy = () => {
+  // const { scroll } = useLocomotiveScroll();
   const { pathname } = useParams();
-  const { scroll } = useLocomotiveScroll();
   const bgRef = useRef(null);
+  const workContent = workBlocks.find(work => work.pagePath === pathname);
 
-  useEffect(() => {
-    console.log(pathname);
-
-    if (scroll) {
-      scroll.on('scroll', (instance) => {
-        if (instance.currentElements['case-study-bg']) {
-          let progress = instance.currentElements['case-study-bg'].progress;
-          let width = bgRef.current.offsetWidth;
-          let multiplier = width * 1.2;
-          let borderRadius = (width / 2) - (progress * multiplier);
-          bgRef.current.style.borderRadius = borderRadius + "px " + borderRadius + "px 0 0";
-        }
-      });
-    }
-  }, [pathname, scroll]);
-
-  useEffect(() => {
-
-  }, [scroll]);
+  // // useEffect(() => {
+  // //   if (scroll) {
+  // //     scroll.on('scroll', (instance) => {
+  // //       if (instance.currentElements['case-study-bg']) {
+  // //         let progress = instance.currentElements['case-study-bg'].progress;
+  // //         let width = bgRef.current.offsetWidth;
+  // //         let multiplier = width * 1.2;
+  // //         let borderRadius = (width / 2) - (progress * multiplier);
+  // //         bgRef.current.style.borderRadius = borderRadius + "px " + borderRadius + "px 0 0";
+  // //       }
+  // //     });
+  // //   }
+  // // }, [scroll]);
 
   return (
     <>
       <main data-scroll-container>
         <header className="c-hero-study" data-scroll-section>
           <div className="c-hero-study__wrapper" data-scroll data-scroll-speed="-2">
-            <h1>Spotify replica</h1>
-            <h2>just to train</h2>
+            <h1>{workContent.title}</h1>
+            <h2>{workContent.subtitle}</h2>
           </div>
         </header>
         <div id="scroll-section">
           <section className="case-study-section" data-scroll-section>
             <div className="case-study-section__view-case">
-              <a className="case-study-section__view-case__link" rel="noreferrer" href="https://benoitpetit.fr/test_creations/spotify_replica/" target="_blank">
+              <a className="case-study-section__view-case__link" rel="noreferrer" href={workContent.article.demoPath} target="_blank">
                 <img src={process.env.PUBLIC_URL + '/img/arrow.png'} alt="White arrow" />
                 <span>view</span>
                 <span>case</span>
@@ -53,32 +49,24 @@ const CaseStudy = () => {
                 <div className="case-study-section__view-case__ovale__symbol"></div>
               </div>
             </div>
-            <div className="case-study-section__article o-wrapper o-wrapper--big">
+            <div className="case-study-section__article">
               <header className="case-study-section__article__header u-anim" data-scroll data-scroll-offset="20%" data-scroll-id="case-study-img">
-                <Arche src={process.env.PUBLIC_URL + '/img/spotify_1.jpg'} alt="Page d'accueil de Spotify" />
+                <Arche src={process.env.PUBLIC_URL + '/img/' + workContent.article.images[0]} alt="Page d'accueil de Spotify" />
               </header>
               <div className="case-study-section__article__content">
                 <LineBreak />
-                <HideBlock>
-                  Made using HTML &amp; SCSS, this little project allowed me to train myself for frontend applications with interresting layouts such as Spotify.
-                </HideBlock>
+                <HideBlock>{workContent.article.text[0]}</HideBlock>
                 <div className="o-block">
                   <div className="o-block o-block--image" tabIndex="0">
-                    <img src={process.env.PUBLIC_URL + '/img/spotify_2.jpg'} alt="Spotify replica card" />
+                    <img src={process.env.PUBLIC_URL + '/img/' + workContent.article.images[1]} alt="Spotify replica card" />
                   </div>
-                  <p className="o-block o-block--text">This layout includes the use of grid to place
-                    blocks such as navigation, playbar, and user flow of albums and playlists.<span className="mt-2 mb-2"></span>Grid feature is used to design responsive design without even
-                    touching to media queries.</p>
+                  <p className="o-block o-block--text">{workContent.article.text[1]}</p>
                 </div>
                 <LineBreak />
-                <HideBlock>
-                  This training project also was a great way to explore the navigator audio API using a
-                  lot of events to catch audio attributes. As well as audio manipulation, I used mouse events to link the audio playbar and music
-                  volume to the width of the element.
-                </HideBlock>
+                <HideBlock>{workContent.article.text[2]}</HideBlock>
                 <div className="c-underline-explanation" data-scroll data-scroll-offset="0, -1000%">
                   <div className="o-block o-block--image" tabIndex="0">
-                    <img src={process.env.PUBLIC_URL + '/img/spotify_3.jpg'} alt="Spotify replica card" />
+                    <img src={process.env.PUBLIC_URL + '/img/' + workContent.article.images[2]} alt="Spotify replica card" />
                   </div>
                 </div>
                 <footer className="case-study-section__article__content__footer">

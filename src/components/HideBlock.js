@@ -11,7 +11,7 @@ const HideBlock = ({ children }) => {
     sentenceArray.forEach(word => {
       charCounter += word.length;
 
-      if (charCounter > 20) {
+      if (charCounter > 18) {
         newSentenceArray.push(`${word}%br%`);
         charCounter = 0;
       } else {

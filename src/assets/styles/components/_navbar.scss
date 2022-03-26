@@ -17,7 +17,7 @@
   font-weight: 400;
 
   @media screen and (max-width: 600px) {
-    padding: 0 30px;
+    padding: 0 10px;
   }
 
   &__wrapper {
@@ -40,6 +40,30 @@
       white-space: nowrap;
       flex-shrink: 1;
       overflow: hidden;
+      position: relative;
+      padding: .6em 1.2em;
+      display: block;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.2);
+        z-index: -1;
+        border-radius: 80%;
+        transform: translate3d(0, -100%, 0);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0, 1);
+      }
+
+      &:hover {
+        &::before {
+          transform: translate3d(0, 0, 0);
+          border-radius: 0;
+        }
+      }
     }
 
     .c-navbar__nav {
