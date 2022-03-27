@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import React, { useRef } from 'react';
+// import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const Arche = ({ src, alt }) => {
-  const { scroll } = useLocomotiveScroll();
+  // const { scroll } = useLocomotiveScroll();
   const imageRef = useRef(null);
 
   // useEffect(() => {

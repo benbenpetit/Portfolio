@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import workBlocks from "Data/works.json";
 import WorkBlock from "Components/WorkBlock";
+import LocoScroll from "Utils/LocoScroll";
 
 const Home = () => {
+  const containerRef = useRef(null);
+
   return (
-    <>
-      <main data-scroll-container>
+    <LocoScroll innerRef={containerRef} direction="vertical">
+      <main data-scroll-container ref={containerRef}>
         <header className="c-hero" data-scroll-section>
           <div className="c-hero__wrapper" data-scroll data-scroll-speed="-2">
             <div className="c-hero__heading">
@@ -40,7 +43,7 @@ const Home = () => {
           </section>
         </div>
       </main>
-    </>
+    </LocoScroll>
   );
 };
 

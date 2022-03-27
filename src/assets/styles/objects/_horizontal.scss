@@ -1,0 +1,16 @@
+.o-horizontal {
+  min-height: 50vh;
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+
+  @media screen and (min-width: 1020px) {
+    min-width: 60vw;
+    min-height: 80vh;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    padding-left: 25vw;
+    padding-right: 10vw;
+  }
+}
