@@ -11,9 +11,9 @@ const Header = () => {
             <li className="c-navbar__nav__list__item">
               <Link path="/about">about</Link>
             </li>
-            <li className="c-navbar__nav__list__item">
+            {/* <li className="c-navbar__nav__list__item">
               <Link path="/contact">contact</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>

@@ -42,7 +42,7 @@ const About = () => {
                 <h3 className="about-section__presentation__right__title">Hey</h3>
                 <div className="about-section__presentation__right__paragraphs o-block">
                   <p>I am 20 years old and i live next to Paris</p>
-                  <p>After a DUT MMI at Troyes and a Professional License web at Sorbonne University, I am now trying to integreate Les Gobelins school!</p>
+                  <p>After a DUT MMI at Troyes and a Professional License web at Sorbonne University, I am now trying to integrate Les Gobelins school!</p>
                 </div>
               </div>
             </div>

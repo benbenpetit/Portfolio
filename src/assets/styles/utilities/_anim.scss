@@ -5,7 +5,7 @@
   transform: translateY(20px);
   transform-origin: center top;
 
-  &.in-view {
+  .js-loading-state.is-loaded &.in-view {
     opacity: 1;
     transition-delay: .05s;
     transform: translateY(0);
@@ -13,7 +13,7 @@
 }
 
 .in-view {
-  @for $i from 0 to 30 {
+  @for $i from 0 to 100 {
     .-delay-#{ $i } {
       transition-delay: $i * 0.05s;
     }

@@ -20,6 +20,12 @@
     padding: 0 10px;
   }
 
+  .js-loading-state.is-loading & {
+    transition: .6s all cubic-bezier(0.4, 0, 0, 1) .1s;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
   &__wrapper {
     width: 100%;
     display: flex;

@@ -1,41 +1,25 @@
 import React, { useEffect, useRef } from 'react';
-// import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
+import workBlocks from "Data/works.json";
 import Arche from 'Components/Arche';
 import Link from 'Components/Link';
 import HideBlock from 'Components/HideBlock';
 import LineBreak from 'Components/LineBreak';
-import workBlocks from "Data/works.json";
+import RoundedBackground from 'Components/RoundedBackground';
 import LocoScroll from 'Utils/LocoScroll';
 
 const CaseStudy = () => {
-  // const { scroll } = useLocomotiveScroll();
   const { pathname } = useParams();
   const navigate = useNavigate();
   const containerRef = useRef(null);
-  const bgRef = useRef(null);
-  const workContent = workBlocks.find(work => work.pagePath !== pathname);
+  const workContent = workBlocks.find(work => work.pagePath === pathname);
 
   useEffect(() => {
     if (!workBlocks.some(work => work.pagePath === pathname)) {
       navigate('/', { replace: true });
     }
   }, [navigate, pathname]);
-
-  // useEffect(() => {
-  //   if (scroll) {
-  //     scroll.on('scroll', (instance) => {
-  //       if (instance.currentElements['case-study-bg']) {
-  //         let progress = instance.currentElements['case-study-bg'].progress;
-  //         let width = bgRef.current.offsetWidth;
-  //         let multiplier = width * 1.2;
-  //         let borderRadius = (width / 2) - (progress * multiplier);
-  //         bgRef.current.style.borderRadius = borderRadius + "px " + borderRadius + "px 0 0";
-  //       }
-  //     });
-  //   }
-  // }, [scroll]);
 
   return (
     <LocoScroll innerRef={containerRef} direction="vertical">
@@ -89,17 +73,14 @@ const CaseStudy = () => {
                         </svg>
                       </div>
                     </Link>
-                    <Link path="/contact" className="c-button u-no-mt">
-                      <span className="c-button__inner -visible">Contact</span>
-                      <span className="c-button__inner -hidden">Contact</span>
+                    <Link path="/about" className="c-button u-no-mt">
+                      <span className="c-button__inner -visible">About</span>
+                      <span className="c-button__inner -hidden">About</span>
                     </Link>
                   </footer>
                 </div>
               </div>
-              <div className="case-study-section__background">
-                <div className="case-study-section__background__arche" ref={bgRef} data-scroll data-scroll-offset="20%" data-scroll-id="case-study-bg"></div>
-                <div className="case-study-section__background__solid"></div>
-              </div>
+              <RoundedBackground />
             </section>
           </div>
         </main>

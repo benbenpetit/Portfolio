@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import workBlocks from "Data/works.json";
 import WorkBlock from "Components/WorkBlock";
 import LocoScroll from "Utils/LocoScroll";
+import clsx from "clsx";
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -10,21 +11,12 @@ const Home = () => {
     <LocoScroll innerRef={containerRef} direction="vertical">
       <main data-scroll-container ref={containerRef}>
         <header className="c-hero" data-scroll-section>
-          <div className="c-hero__wrapper" data-scroll data-scroll-speed="-2">
+          <div className="c-hero__wrapper" data-scroll data-scroll-offset="0, -2000%" data-scroll-speed="-2">
             <div className="c-hero__heading">
               <h1 className="c-hero__heading__title">
-                <span>B</span>
-                <span>e</span>
-                <span>n</span>
-                <span>o</span>
-                <span>i</span>
-                <span>t</span>
-                <span>&nbsp;</span>
-                <span>P</span>
-                <span>e</span>
-                <span>t</span>
-                <span>i</span>
-                <span>t</span>
+                {"Benoît Petit".split('').map((character, i) =>
+                  <span key={i} className={clsx(`-delay-${i + 20}`)}>{character === ' ' ? '\u00A0' : character}</span>
+                )}
               </h1>
             </div>
             <h2 className="c-hero__subtitle">modest frontend developer based in paris 🤠</h2>
