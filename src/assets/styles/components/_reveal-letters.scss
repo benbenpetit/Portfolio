@@ -1,0 +1,16 @@
+.c-reveal-letters {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  column-gap: 5px;
+  overflow: hidden;
+
+  &__letter {
+    transform: translate3d(0, 100%, 0);
+    transition: 0.3s transform cubic-bezier(0.4, 0, 0, 1);
+
+    .c-reveal-letters.in-view & {
+      transform: translate3d(0, 0, 0); 
+    }
+  }
+}
