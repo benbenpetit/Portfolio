@@ -14,7 +14,7 @@ const LocoScroll = ({ direction, innerRef, children }) => {
 
   useEffect(() => {
     loadingStateRef.current.classList.add('is-loaded');
-  }, [loadingStateRef]);
+  }, []);
 
   return (
     <LocomotiveScrollProvider

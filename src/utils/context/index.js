@@ -5,7 +5,7 @@ export const LoadingProvider = ({ children }) => {
 
   return (
     <LoadingContext.Provider value={{ loadingStateRef }}>
-      <div ref={loadingStateRef} className="js-loading-state">{children}</div>
+      <div ref={loadingStateRef} className="js-loading-state is-loading">{children}</div>
     </LoadingContext.Provider>
   );
 };
