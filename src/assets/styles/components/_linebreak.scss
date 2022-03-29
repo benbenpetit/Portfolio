@@ -7,6 +7,10 @@
   transition: width 0.8s cubic-bezier(0.43, 0.61, 0.39, 0.99);
   will-change: width;
 
+  @media screen and (max-width: 600px) {
+      margin: 1.4rem 0;
+  }
+
   &.in-view {
     width: 100%;
   }

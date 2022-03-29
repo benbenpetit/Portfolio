@@ -39,7 +39,7 @@ const About = () => {
                 <img className="about-section__presentation__left__pic" src={process.env.PUBLIC_URL + '/img/me.jpg'} alt="Face of Benoît Petit" data-scroll data-scroll-speed="-2" />
               </div>
               <div className="about-section__presentation__right">
-                <h3 className="about-section__presentation__right__title">Hey</h3>
+                <h3 className="about-section__presentation__right__title">Hey,</h3>
                 <div className="about-section__presentation__right__paragraphs o-block">
                   <p>I am 20 years old and i live next to Paris</p>
                   <p>After a DUT MMI at Troyes and a Professional License web at Sorbonne University, I am now trying to integrate Les Gobelins school!</p>

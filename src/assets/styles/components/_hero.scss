@@ -22,11 +22,11 @@
       span {
         display: inline-block;
         will-change: transform;
-        transform: translate3d(0, 125%, 0) skewY(60deg);
-        transition: .6s transform cubic-bezier(0.4, 0.2, 0.1, 1.3);
+        transform: translate3d(0, 125%, 0) skew(80deg, 20deg);
+        transition: .6s transform cubic-bezier(0.4, 0.1, 0.05, 1.4);
 
         .c-hero__wrapper.in-view & {
-          transform: translate3d(0, 0, 0) skewY(0);
+          transform: translate3d(0, 0, 0) skew(0, 0);
         }
       }
     }
