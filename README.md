@@ -5,7 +5,7 @@ Modest portfolio done with love and fervor with
 - SCSS (inuitcss structure)
 - React & react-router
 
-### Install and try the project
+## Install and try the project
 
 ```javascript
 // Install dependencies
