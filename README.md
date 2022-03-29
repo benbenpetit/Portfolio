@@ -2,5 +2,5 @@
 
 Modest portfolio done with love and fervor with\
   LocomotiveScroll (💚)\
-  SCSS (inuitcss structure)\ 
+  SCSS (inuitcss structure)\
   React & react-router
