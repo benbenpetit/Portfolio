@@ -13,4 +13,8 @@
     padding-left: 25vw;
     padding-right: 10vw;
   }
+
+  @media screen and (max-width: 1020px) {
+    width: 100%;
+  }
 }

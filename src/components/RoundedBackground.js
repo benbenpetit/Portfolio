@@ -19,7 +19,6 @@ const RoundedBackground = ({ src, alt }) => {
     }
   }, [scroll]);
 
-
   return (
     <div className="case-study-section__background">
       <div className="case-study-section__background__arche" ref={bgRef} data-scroll data-scroll-offset="20%" data-scroll-id="case-study-bg"></div>
