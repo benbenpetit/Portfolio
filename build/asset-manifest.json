@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/public/static/css/main.7870140a.css",
-    "main.js": "/public/static/js/main.07a65c70.js",
-    "static/media/noise.webp": "/public/static/media/noise.e433ea2cf0766889d6e0.webp",
-    "static/media/GlyphWorldMeadow.ttf": "/public/static/media/GlyphWorldMeadow.688dbe6de298bf76d25c.ttf",
-    "index.html": "/public/index.html",
-    "main.7870140a.css.map": "/public/static/css/main.7870140a.css.map",
-    "main.07a65c70.js.map": "/public/static/js/main.07a65c70.js.map"
+    "main.css": "/static/css/main.aca19cb6.css",
+    "main.js": "/static/js/main.94be5c99.js",
+    "static/media/noise.webp": "/static/media/noise.e433ea2cf0766889d6e0.webp",
+    "static/media/GlyphWorldMeadow.ttf": "/static/media/GlyphWorldMeadow.688dbe6de298bf76d25c.ttf",
+    "index.html": "/index.html",
+    "main.aca19cb6.css.map": "/static/css/main.aca19cb6.css.map",
+    "main.94be5c99.js.map": "/static/js/main.94be5c99.js.map"
   },
   "entrypoints": [
-    "static/css/main.7870140a.css",
-    "static/js/main.07a65c70.js"
+    "static/css/main.aca19cb6.css",
+    "static/js/main.94be5c99.js"
   ]
 }
