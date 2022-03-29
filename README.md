@@ -7,5 +7,12 @@ Modest portfolio done with love and fervor with
 
 ### Install and try the project
 
-```yarn```
-```yarn start```
+```
+  // Install dependencies
+  yarn
+```
+
+```
+  // Start dev server
+  yarn start
+```
