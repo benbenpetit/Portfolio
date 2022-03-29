@@ -24,6 +24,7 @@ const LocoScroll = ({ direction, innerRef, children }) => {
         lerp: 0.12,
         class: "in-view",
         direction: direction,
+        reloadOnContextChange: true,
         scrollbarContainer: document.getElementById("root"),
       }}
       watch={[]}

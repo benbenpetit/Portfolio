@@ -1,6 +1,12 @@
 .c-hide-block {
   position: relative;
-  margin: 2rem 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
 
   &__paragraph {
     font-size: 2rem;
