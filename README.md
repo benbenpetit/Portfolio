@@ -1,4 +1,4 @@
-# My portfolio
+# 🟩 My portfolio
 
 Modest portfolio done with love and fervor with
 - LocomotiveScroll
