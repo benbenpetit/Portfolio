@@ -1,65 +1,102 @@
 [
-    {
-        "id": 1,
-        "title": "Spotify replica",
-        "subtitle": "just to train",
-        "text": "Made a spotify replica using SCSS to enhance basic CSS possibilities and clearer file management. Used vanilla Javascript to manipulate music with web audio API",
-        "imagePath": "/spotify.jpg",
-        "pagePath": "spotify-replica",
-        "article": {
-            "demoPath": "https://benoitpetit.fr/test_creations/spotify_replica/",
-            "images": [
-                "spotify_1.jpg",
-                "spotify_2.jpg",
-                "spotify_3.jpg"
-            ],
-            "text": [
-                "Made using HTML & SCSS, this little project allowed me to train myself for frontend applications with interresting layouts such as Spotify.",
-                "This layout includes the use of grid to place blocks such as navigation, playbar, and user flow of albums and playlists. Grid feature is used to design responsive design without even touching to media queries.",
-                "This training project also was a great way to explore the navigator audio API using a lot of events to catch audio attributes. As well as audio manipulation, I used mouse events to link the audio playbar and music volume to the width of the element."
-            ]
-        }
-    },
-    {
-        "id": 2,
-        "title": "Landing page",
-        "subtitle": "group work",
-        "text": "Simple landing page with several interresting features such as sliders but also 3D Object and option to change language.",
-        "imagePath": "/landing.jpg",
-        "pagePath": "landing-page",
-        "article": {
-            "demoPath": "https://benoitpetit.fr/promo/",
-            "images": [
-                "landing_1.jpg",
-                "landing.jpg",
-                "landing_3.jpg"
-            ],
-            "text": [
-                "This project is a landing page for an online game card I used it to develop big features such as a slider and a 3D Object.",
-                "This slider was made using SwiperJS (instead of the first slider which is done in vanilla Javascript with the help of GSAP)I learned how to put in place this librairy which is really easy and also works on mobile.",
-                "To promote the game, we thought we could include a 3D model of the box. So I've implemented it using ThreeJS, which makes it really easy to do that kind of stuff."
-            ]
-        }
-    },
-    {
-        "id": 3,
-        "title": "Login system",
-        "subtitle": "just to train",
-        "text": "Made a complete login system + Google login using MySQL database and PHP to make requests. Also using jQuery AJAX to notify the user from errors.",
-        "imagePath": "/login.jpg",
-        "pagePath": "login-system",
-        "article": {
-            "demoPath": "https://benoitpetit.fr/test_creations/google_login/",
-            "images": [
-                "login_1.jpg",
-                "login_2.jpg",
-                "login_3.jpg"
-            ],
-            "text": [
-                "Made with standard technologies such as HTML/CSS + jQuery & PHP. This project was made to train myself, to challenge myself about login system as well as understanding the Google login API.",
-                "A big part of that project was to send live responses to the user for a good UX.This was made by sending async requests with AJAX (simplified by jQuery). Same story on the \"sign in\" side with cool UI cards to prevent from errors.",
-                "This personal project also was a great way to deal with the google login feature which in my case I use a lot to buy time. So i thought this would be a great opportunity to implement that to learn more about the functioning system behind that simple button."
-            ]
-        }
+  {
+    "id": 1,
+    "title": "Fatale Mascarade",
+    "subtitle": "group work",
+    "text": "Hybrid game mixing physical cards and web application. Made with React and NodeJS with Socket.io for the live interactions between players.",
+    "imagePath": "/fatale-mascarade.jpg",
+    "pagePath": "fatale-mascarade",
+    "article": {
+      "demoPath": "https://fatale-mascarade.vercel.app/",
+      "images": [
+        "fatale-mascarade.jpg",
+        "fatale-mascarade_1.jpg",
+        "fatale-mascarade_2.jpg",
+        "fatale-mascarade_3.jpg"
+      ],
+      "text": [
+        "Made using React backed with a NodeJS server with Socket.io for the live interactions between players.",
+        "This is a group project in which I was the only developer and my partner was the designer. This was the first time I have ever used Socket.io",
+        "This is an hybrid game with physical cards and the application (preferably played on mobile phone). Every played has an attributed role and must find who is the killer. Players must find clues and discuss to find the killer. The game is played in 5 rounds."
+      ]
     }
+  },
+  {
+    "id": 2,
+    "title": "Turbo Bechamel",
+    "subtitle": "group work",
+    "text": "Project finished in 3 days for a Game Jam. The words we had were : \"Action\", \"Vin Diesel\", \"Lasagnas\" and \"Grandmother\".",
+    "imagePath": "/turbo-bechamel.jpg",
+    "pagePath": "turbo-bechamel",
+    "article": {
+      "demoPath": "https://turbo-bechamel.vercel.app/",
+      "images": [
+        "turbo-bechamel_1.jpg",
+        "turbo-bechamel_2.jpg",
+        "turbo-bechamel_3.jpg"
+      ],
+      "text": [
+        "This project is from a Game Jam in which we had to make a game in 3 days.",
+        "The mandatory words we had to put in the game were : \"Action\", \"Vin Diesel\", \"Lasagnas\" and \"Grandmother\".",
+        "We made a game where you play as Vin Diesel who has to make lasagnas to feed the car and make it go faster. You are chased by your grandmother who wants the recipe of the lasagnas. You have to avoid her and make the lasagnas to win the game."
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Neolympics",
+    "subtitle": "group work",
+    "text": "3D skate game about new olympic sports made with Vue and Three.js",
+    "imagePath": "/neolympics.jpg",
+    "pagePath": "neolympics",
+    "article": {
+      "demoPath": "https://neolympics.vercel.app/",
+      "images": [
+        "neolympics.jpg",
+        "neolympics_2.jpg",
+        "neolympics_3.jpg",
+        "neolympics_4.jpg",
+        "neolympics_5.jpg",
+        "neolympics_6.jpg"
+      ],
+      "text": [
+        "This project is a 3D skate game about new olympic sports.",
+        "The imposed theme was The Olympics. We decided to make a game about new olympic sports in Paris 2024 such as skateboarding, breakdancing, surfing. We prioritized skateboarding.",
+        "The game is a skate game where you have to do tricks like a pattern to get the most points."
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "Seeet",
+    "subtitle": "just to train",
+    "text": "Little game in which you have to make Seeets powered by Tauri to have it desktop app",
+    "imagePath": "/seeet.jpg",
+    "pagePath": "seeet",
+    "article": {
+      "demoPath": "https://github.com/benbenpetit/Seeet",
+      "images": ["seeet.jpg", "seeet_2.jpg", "seeet_3.jpg"],
+      "text": [
+        "This is an existing game, I just copied it to be able to play it on my computer.",
+        "In the game, certain combinations of three cards are said to make up a \"set\". For each one of the four categories of features—color, number, shape, and shading—the three cards must display that feature as either all the same, or all different.",
+        "I made this game to train myself and to have a desktop app made with Tauri."
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "title": "Creations",
+    "subtitle": "just to train",
+    "text": "Some of randoms tests I made to experiment",
+    "imagePath": "/benbenpetit.gif",
+    "pagePath": "creations",
+    "article": {
+      "isTests": true,
+      "images": ["benbenpetit.gif"],
+      "text": [
+        "Some tests I made.",
+        "These are all the little experimental websites or ideas I put in place while I was searching for ideas, or when I wanted to copy effects I saw on some websites, or when I was bored."
+      ]
+    }
+  }
 ]
