@@ -43,7 +43,7 @@ const CREATIONS = [
   },
   {
     title: 'Watch video',
-    url: 'https://watch-video.vercel.app/',
+    url: 'https://watch-video-sauvage.vercel.app/',
     imgPath: 'watch-video.jpg'
   },
   {
